@@ -1,0 +1,39 @@
+body {
+  background: linear-gradient(90deg, #9ddfd3, #31326f);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.search {
+  position: relative;
+}
+
+.button {
+  cursor: pointer;
+  padding: 15px 15px;
+  background-color: #ffff;
+  border: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease;
+}
+.input:focus,
+.button:focus {
+  outline: 0;
+}
+.input {
+  width: 10px;
+  padding: 15px;
+  border: 0;
+  transition: width 0.3s ease;
+}
+
+.search.active .input {
+  width: 180px;
+}
+
+.search.active .button {
+  transform: translateX(220px);
+}
